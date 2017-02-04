@@ -21,7 +21,7 @@
       "metadata": {
         "description": "The name of the Virtual Network to Create"
       },
-      "defaultValue": "MAPFRE_SP2013_VNET"
+      "defaultValue": "MAPFRE_SP2013_VNet"
     },
     "virtualNetworkAddressRange": {
       "type": "string",
@@ -161,7 +161,7 @@
       "metadata": {
         "description": "The DNS Prefix for the SharePoint Public IP Address"
       },
-      "defaultValue": "sp2013-dns"
+      "defaultValue": "mapfre-sp2013-dev"
     },
     "baseUrl": {
       "type": "string",
@@ -201,7 +201,7 @@
       "metadata": {
         "description": "Name prefix of the new storage account created to store the VMs disks"
       },
-      "defaultValue": "storage4sp2013"
+      "defaultValue": "storage4sp2013_"
     },
     "storageAccountType": {
       "type": "string",
