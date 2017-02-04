@@ -193,7 +193,8 @@
       "type": "string",
       "metadata": {
         "description": "Name of existing public IP resource for Sharepoint"
-      }
+      },
+      "defaultValue": "publicIP"
     },
     "storageAccountNamePrefix": {
       "type": "string",
