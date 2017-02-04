@@ -7,7 +7,7 @@
       "metadata": {
         "description": "The name of the Sharepoint farm"
       },
-      "defaultValue": "MAPFRE_SP2013_Farm"
+      "defaultValue": "sp2013"
     },
     "location": {
       "type": "string",
@@ -21,7 +21,7 @@
       "metadata": {
         "description": "The name of the Virtual Network to Create"
       },
-      "defaultValue": "MAPFRE_SP2013_VNet"
+      "defaultValue": "sp2013_VNET"
     },
     "virtualNetworkAddressRange": {
       "type": "string",
@@ -146,7 +146,7 @@
       "type": "securestring",
       "metadata": {
         "description": "The Sharepoint Farm Passphrase"
-      }      ,
+      },
       "defaultValue": "Iberoamerica$passphrase"
     },
     "spSiteTemplateName": {
@@ -160,7 +160,8 @@
       "type": "string",
       "metadata": {
         "description": "The DNS Prefix for the SharePoint Public IP Address"
-      }
+      },
+      "defaultValue": "sp2013"
     },
     "baseUrl": {
       "type": "string",
@@ -198,7 +199,8 @@
       "type": "string",
       "metadata": {
         "description": "Name prefix of the new storage account created to store the VMs disks"
-      }
+      },
+      "defaultValue": "storage4sp2013"
     },
     "storageAccountType": {
       "type": "string",
