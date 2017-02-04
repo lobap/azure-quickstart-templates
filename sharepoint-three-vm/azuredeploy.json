@@ -7,7 +7,7 @@
       "metadata": {
         "description": "The name of the Sharepoint farm"
       },
-      "defaultValue": "sp2013"
+      "defaultValue": "MAPFRE_SP2013"
     },
     "location": {
       "type": "string",
@@ -21,7 +21,7 @@
       "metadata": {
         "description": "The name of the Virtual Network to Create"
       },
-      "defaultValue": "sp2013_VNET"
+      "defaultValue": "MAPFRE_SP2013_VNET"
     },
     "virtualNetworkAddressRange": {
       "type": "string",
@@ -194,7 +194,7 @@
       "metadata": {
         "description": "Name of existing public IP resource for Sharepoint"
       },
-      "defaultValue": "publicIP"
+      "defaultValue": "MAPFRE_SP2013_PublicIP"
     },
     "storageAccountNamePrefix": {
       "type": "string",
@@ -222,20 +222,20 @@
     "configDatabaseName": "MAPFRE_SP2013_Config",
     "administrationContentDatabaseName": "MAPFRE_SP2013_AdminContent",
     "contentDatabaseName": "MAPFRE_SP2013_Content",
-    "adVMName": "[concat(parameters('sharepointFarmName'),'-ad')]",
-    "sqlVMName": "[concat(parameters('sharepointFarmName'),'-sql')]",
-    "spVMName": "[concat(parameters('sharepointFarmName'),'-sp')]",
+    "adVMName": "[concat(parameters('sharepointFarmName'),'-AD')]",
+    "sqlVMName": "[concat(parameters('sharepointFarmName'),'-SQL')]",
+    "spVMName": "[concat(parameters('sharepointFarmName'),'-SP')]",
     "LBFE": "LBFE",
     "LBBE": "LBBE",
     "RDPNAT": "RDP",
-    "spWebNAT": "sp2013-spWeb",
-    "spCANAT": "sp2013-spCentralAdmin",
-    "adSubnetName": "sp2013-ad_Subnet",
-    "sqlSubnetName": "sp2013-sql_Subnet",
-    "spSubnetName": "sp2013-sp_Subnet",
-    "adNicName": "sp2013-ad_Nic",
-    "sqlNicName": "sp2013-sql_Nic",
-    "spNicName": "sp2013-sp_Nic",
+    "spWebNAT": "MAPFRE_SP2013_SPWeb",
+    "spCANAT": "MAPFRE_SP2013_SPCentralAdmin",
+    "adSubnetName": "MAPFRE_SP2013-AD_SubNet",
+    "sqlSubnetName": "MAPFRE_SP2013-SQL_SubNet",
+    "spSubnetName": "MAPFRE_SP2013-SP_SubNet",
+    "adNicName": "MAPFRE_SP2013-AD_NIC",
+    "sqlNicName": "MAPFRE_SP2013-SQL_NIC",
+    "spNicName": "MAPFRE_SP2013-SP_NIC",
     "VnetID": "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]",
     "adSubnetRef": "[concat(variables('VnetID'),'/subnets/',variables('adSubnetName'))]",
     "sqlSubnetRef": "[concat(variables('VnetID'),'/subnets/',variables('sqlSubnetName'))]",
@@ -243,9 +243,9 @@
     "adNicId": "[resourceId('Microsoft.Network/networkInterfaces',variables('adNicName'))]",
     "sqlNicId": "[resourceId('Microsoft.Network/networkInterfaces',variables('sqlNicName'))]",
     "spNicId": "[resourceId('Microsoft.Network/networkInterfaces',variables('spNicName'))]",
-    "adLBName": "adLoadBalancer",
-    "sqlLBName": "sqlLoadBalancer",
-    "spLBName": "spLoadBalancer",
+    "adLBName": "MAPFRE_SP2013-AD_LoadBalancer",
+    "sqlLBName": "MAPFRE_SP2013-SQL_LoadBalancer",
+    "spLBName": "MAPFRE_SP2013-SP_LoadBalancer",
     "adIPConfigID": "[concat(variables('adNicId'),'/ipConfigurations/ipconfig1')]",
     "adlbID": "[resourceId('Microsoft.Network/loadBalancers',variables('adLBName'))]",
     "adlbFEConfigID": "[concat(variables('adlbID'),'/frontendIPConfigurations/',variables('LBFE'))]",
@@ -257,20 +257,20 @@
     "sqlRDPNATRuleID": "[concat(variables('sqllbID'),'/inboundNatRules/',variables('RDPNAT'))]",
     "sqlBEAddressPoolID": "[concat(variables('sqllbID'),'/backendAddressPools/',variables('LBBE'))]",
     "spIPConfigID": "[concat(variables('spNicId'),'/ipConfigurations/ipconfig1')]",
-    "adDataDisk": "SP2013-AD_DataDisk",
+    "adDataDisk": "MAPFRE_SP2013-AD_DataDisk",
     "adDataDiskSize": 1000,
-    "sqlDataDisk": "SP2013-SQL_DataDisk",
+    "sqlDataDisk": "MAPFRE_SP2013-SQL_DataDisk",
     "sqlDataDiskSize": 1000,
-    "sqlLogDisk": "SP2013-SQL_LogDisk",
+    "sqlLogDisk": "MAPFRE_SP2013-SQL_LogDisk",
     "sqlLogDiskSize": 1000,
-    "spDataDisk": "SP2013-SP_DataDisk",
+    "spDataDisk": "MAPFRE_SP2013-SP_DataDisk",
     "spDataDiskSize": 1000,
-    "adpublicIPAddressName": "sp2013-ad_publicIP",
-    "sqlpublicIPAddressName": "sp2013-sql_publicIP",
+    "adpublicIPAddressName": "MAPFRE_SP2013-AD_publicIP",
+    "sqlpublicIPAddressName": "MAPFRE_SP2013-SQL_publicIP",
     "spCentralAdminPort": 8080,
-    "spAvailabilitySetName": "sp2013-sp_AvailabiltySet",
-    "sqlAvailabilitySetName": "sp2013-sql_AvailabiltySet",
-    "adAvailabilitySetName": "sp2013-ad_AvailabiltySet",
+    "spAvailabilitySetName": "MAPFRE_SP2013-SP_AvailabiltySet",
+    "sqlAvailabilitySetName": "MAPFRE_SP2013-SQL_AvailabiltySet",
+    "adAvailabilitySetName": "MAPFRE_SP2013-AD_AvailabiltySet",
     "publicIPAddressType": "Dynamic",
     "subnets": [
       {
