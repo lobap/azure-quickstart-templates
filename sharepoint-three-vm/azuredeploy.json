@@ -7,7 +7,7 @@
       "metadata": {
         "description": "The name of the Sharepoint farm"
       },
-      "defaultValue": "spfarm"
+      "defaultValue": "MAPFRE_SP2013_Farm"
     },
     "location": {
       "type": "string",
@@ -21,7 +21,7 @@
       "metadata": {
         "description": "The name of the Virtual Network to Create"
       },
-      "defaultValue": "spfarmVNET"
+      "defaultValue": "MAPFRE_SP2013_VNet"
     },
     "virtualNetworkAddressRange": {
       "type": "string",
@@ -62,13 +62,15 @@
       "type": "string",
       "metadata": {
         "description": "The name of the Administrator of the new VM and Domain"
-      }
+      },
+      "defaultValue": "gnpablo"
     },
     "adminPassword": {
       "type": "securestring",
       "metadata": {
         "description": "The password forthe Administrator account of the new VM and Domain"
-      }
+      },
+      "defaultValue": "Iberoamerica$"
     },
     "adVMSize": {
       "type": "string",
@@ -96,52 +98,56 @@
       "metadata": {
         "description": "The FQDN of the AD Domain created "
       },
-      "defaultValue": "contoso.local"
+      "defaultValue": "mapfre.local"
     },
     "sqlServerServiceAccountUserName": {
       "type": "string",
       "metadata": {
         "description": "The SQL Server Service account name"
       },
-      "defaultValue": "sqlservice"
+      "defaultValue": "SQLService"
     },
     "sqlServerServiceAccountPassword": {
       "type": "securestring",
       "metadata": {
         "description": "The SQL Server Service account password"
-      }
+      },
+      "defaultValue": "Iberoamerica$"
     },
     "sharePointSetupUserAccountUserName": {
       "type": "string",
       "metadata": {
         "description": "The Sharepoint Setup account name"
       },
-      "defaultValue": "sp_setup"
+      "defaultValue": "SPSetup"
     },
     "sharePointSetupUserAccountPassword": {
       "type": "securestring",
       "metadata": {
         "description": "The Sharepoint Setup account password"
-      }
+      },
+      "defaultValue": "Iberoamerica$"
     },
     "sharePointFarmAccountUserName": {
       "type": "string",
       "metadata": {
         "description": "The Sharepoint Farm account name"
       },
-      "defaultValue": "sp_farm"
+      "defaultValue": "SPFarm"
     },
     "sharePointFarmAccountPassword": {
       "type": "securestring",
       "metadata": {
         "description": "The Sharepoint Farm account password"
-      }
+      },
+      "defaultValue": "Iberoamerica$"
     },
     "sharePointFarmPassphrasePassword": {
       "type": "securestring",
       "metadata": {
         "description": "The Sharepoint Farm Passphrase"
-      }
+      }      ,
+      "defaultValue": "Iberoamerica$passphrase"
     },
     "spSiteTemplateName": {
       "type": "string",
@@ -210,9 +216,9 @@
   },
   "variables": {
     "assetLocation":"[concat(parameters('baseUrl'),'/dsc')]",
-    "configDatabaseName": "SP_Config",
-    "administrationContentDatabaseName": "SP_AdminContent",
-    "contentDatabaseName": "spARM_Content",
+    "configDatabaseName": "MAPFRE_SP2013_Config",
+    "administrationContentDatabaseName": "MAPFRE_SP2013_AdminContent",
+    "contentDatabaseName": "MAPFRE_SP2013_Content",
     "adVMName": "[concat(parameters('sharepointFarmName'),'-ad')]",
     "sqlVMName": "[concat(parameters('sharepointFarmName'),'-sql')]",
     "spVMName": "[concat(parameters('sharepointFarmName'),'-sp')]",
