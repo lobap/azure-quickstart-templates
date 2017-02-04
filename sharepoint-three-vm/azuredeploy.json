@@ -161,7 +161,7 @@
       "metadata": {
         "description": "The DNS Prefix for the SharePoint Public IP Address"
       },
-      "defaultValue": "sp2013-"
+      "defaultValue": "sp2013-dns"
     },
     "baseUrl": {
       "type": "string",
@@ -222,9 +222,9 @@
     "configDatabaseName": "MAPFRE_SP2013_Config",
     "administrationContentDatabaseName": "MAPFRE_SP2013_AdminContent",
     "contentDatabaseName": "MAPFRE_SP2013_Content",
-    "adVMName": "[concat(parameters('sharepointFarmName'),'-AD')]",
-    "sqlVMName": "[concat(parameters('sharepointFarmName'),'-SQL')]",
-    "spVMName": "[concat(parameters('sharepointFarmName'),'-SP')]",
+    "adVMName": "SP2013-AD",
+    "sqlVMName": "SP2013-SQL",
+    "spVMName": "SP2013-SP",
     "LBFE": "LBFE",
     "LBBE": "LBBE",
     "RDPNAT": "RDP",
