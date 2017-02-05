@@ -77,21 +77,21 @@
       "metadata": {
         "description": "The size of the AD VM Created"
       },
-      "defaultValue": "Standard_DS2"
+      "defaultValue": "Standard_D1_v2"
     },
     "sqlVMSize": {
       "type": "string",
       "metadata": {
         "description": "The size of the SQL VM Created"
       },
-      "defaultValue": "Standard_DS2"
+      "defaultValue": "Standard_D2_v2"
     },
     "spVMSize": {
       "type": "string",
       "metadata": {
         "description": "The size of the VM Created"
       },
-      "defaultValue": "Standard_DS3"
+      "defaultValue": "Standard_D3_v2"
     },
     "domainName": {
       "type": "string",
@@ -214,7 +214,7 @@
       "metadata": {
         "description": "The type of the Storage Account created"
       },
-      "defaultValue": "Premium_LRS"
+      "defaultValue": "Standard_LRS"
     }
   },
   "variables": {
@@ -258,13 +258,13 @@
     "sqlBEAddressPoolID": "[concat(variables('sqllbID'),'/backendAddressPools/',variables('LBBE'))]",
     "spIPConfigID": "[concat(variables('spNicId'),'/ipConfigurations/ipconfig1')]",
     "adDataDisk": "MAPFRE_SP2013-AD_DataDisk",
-    "adDataDiskSize": 1000,
+    "adDataDiskSize": 40,
     "sqlDataDisk": "MAPFRE_SP2013-SQL_DataDisk",
-    "sqlDataDiskSize": 1000,
+    "sqlDataDiskSize": 40,
     "sqlLogDisk": "MAPFRE_SP2013-SQL_LogDisk",
-    "sqlLogDiskSize": 1000,
+    "sqlLogDiskSize": 250,
     "spDataDisk": "MAPFRE_SP2013-SP_DataDisk",
-    "spDataDiskSize": 1000,
+    "spDataDiskSize": 200,
     "adpublicIPAddressName": "MAPFRE_SP2013-AD_PublicIP",
     "sqlpublicIPAddressName": "MAPFRE_SP2013-SQL_PublicIP",
     "spCentralAdminPort": 8080,
