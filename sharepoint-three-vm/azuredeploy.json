@@ -169,7 +169,7 @@
         "artifactsBaseUrl": "",
         "description": "URL to acquire other templates"
       },
-      "defaultValue": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sharepoint-three-vm"
+      "defaultValue": "https://raw.githubusercontent.com/lobap/azure-quickstart-templates/master/sharepoint-three-vm"
     },
     "spPublicIPNewOrExisting": {
       "type": "string",
