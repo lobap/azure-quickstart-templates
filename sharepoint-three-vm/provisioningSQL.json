@@ -83,7 +83,7 @@
               "name": "[concat(parameters('sqlVMName'),'-data-disk1')]",
               "createOption": "empty",
               "caching": "None",
-              "diskSizeGB": "diskSizeGB": "[parameters('sqlDataDiskSize')]",,
+              "diskSizeGB": "[parameters('sqlDataDiskSize')]",
               "lun": 0
             },
             {
@@ -93,7 +93,7 @@
               "name": "[concat(parameters('sqlVMName'),'-log-disk1')]",
               "createOption": "empty",
               "caching": "None",
-              "diskSizeGB": 1000,
+              "diskSizeGB": "[parameters('sqlLogDiskSize')]",
               "lun": 1
             }
           ]
