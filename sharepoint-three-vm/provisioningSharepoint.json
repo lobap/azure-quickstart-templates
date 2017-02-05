@@ -32,6 +32,9 @@
     "spDataDisk": {
       "type": "string"
     },
+    "spDataDiskSize": {
+      "type": "integer"
+    },
     "storageAccountNamePrefix": {
       "type": "string"
     },
