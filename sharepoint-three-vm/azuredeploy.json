@@ -618,6 +618,9 @@
           "adDataDisk": {
             "value": "[variables('adDataDisk')]"
           },
+          "adDataDiskSize": {
+            "value": "[variables('adDataDiskSize')]"
+          },
           "adNicName": {
             "value": "[variables('adNicName')]"
           },
@@ -676,6 +679,12 @@
           },
           "sqlLogDisk": {
             "value": "[variables('sqlLogDisk')]"
+          },
+          "sqlDataDiskSize": {
+            "value": "[variables('sqlDataDiskSize')]"
+          },
+          "sqlLogDiskSize": {
+            "value": "[variables('sqlLogDiskSize')]"
           },
           "sqlNicName": {
             "value": "[variables('sqlNicName')]"
@@ -738,6 +747,9 @@
           },
           "spDataDisk": {
             "value": "[variables('spDataDisk')]"
+          },
+          "spDataDiskSize": {
+            "value": "[variables('spDataDiskSize')]"
           },
           "storageAccountNamePrefix": {
             "value": "[parameters('storageAccountNamePrefix')]"
