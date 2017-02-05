@@ -201,7 +201,7 @@
       "metadata": {
         "description": "Name prefix of the new storage account created to store the VMs disks"
       },
-      "defaultValue": "storage4sp2013_"
+      "defaultValue": "storage4sp2013v"
     },
     "storageAccountType": {
       "type": "string",
