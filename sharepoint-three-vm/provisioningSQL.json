@@ -26,6 +26,12 @@
     "sqlDataDisk": {
       "type": "string"
     },
+    "sqlDataDiskSize": {
+      "type": "integer"
+    },
+    "sqlLogDiskSize": {
+      "type": "integer"
+    },
     "sqlLogDisk": {
       "type": "string"
     },
