@@ -83,7 +83,7 @@
               "name": "[concat(parameters('sqlVMName'),'-data-disk1')]",
               "createOption": "empty",
               "caching": "None",
-              "diskSizeGB": 1000,
+              "diskSizeGB": "diskSizeGB": "[parameters('sqlDataDiskSize')]",,
               "lun": 0
             },
             {
