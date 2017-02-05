@@ -26,6 +26,9 @@
     "adDataDisk": {
       "type": "string"
     },
+    "adDataDiskSize": {
+      "type": "integer"
+    },
     "adNicName": {
       "type": "string"
     },
